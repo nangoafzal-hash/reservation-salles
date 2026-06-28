@@ -30,4 +30,20 @@ public class GestionnaireReservation {
     public void annulerReservation(Reservation res) {
         listeReservations.remove(res);
     }
+     public void afficherReservations() {
+        if (listeReservations.isEmpty()) {
+            System.out.println("Aucune réservation enregistrée.");
+            return;
+        }
+
+        System.out.println("Liste des réservations :");
+
+        for (Reservation r : listeReservations) {
+            System.out.println(
+                "Utilisateur : " + r.getNomUtilisateur()
+                + " | Salle : " + r.getSalle().getNom()
+                + " | Créneau : " + r.getCreneau()
+            );
+        }
+    }
 }
