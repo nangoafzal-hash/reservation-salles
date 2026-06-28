@@ -11,10 +11,10 @@ public class GestionnaireReservation {
         for (Reservation r : listeReservations) {
             if (r.getSalle().getNom().equals(salle.getNom())
                 && r.getCreneau().equals(creneau)) {
-                return true;  
+                return false;  
             }
         }
-        return false; 
+        return true; 
     }
 
     public boolean ajouterReservation(Salle salle, String creneau, String nomUtilisateur) {
